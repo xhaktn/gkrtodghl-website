@@ -146,6 +146,7 @@ textarea {
   border: 2px dashed #ff69b4;
   resize: none;
   font-size: 16px;
+  justify-content: center;
 }
 
 button {
