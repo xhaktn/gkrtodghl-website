@@ -25,16 +25,11 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.menu-bar {
-  background-color: #fff0f5;
-  padding: 10px 0;
-  border-bottom: 3px dashed #ffa07a;
-}
-
 .menu-bar ul {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  flex-direction: column; /* 세로로 정렬 */
+  align-items: center; /* 가운데 정렬 */
+  gap: 15px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -44,35 +39,34 @@ body {
   text-decoration: none;
   color: #333;
   background-color: #ffd700;
-  padding: 8px 20px;
+  padding: 15px 30px; /* 세로로 더 길게 */
   border-radius: 20px;
   transition: all 0.3s;
+  text-align: center;
+  font-size: 16px;
 }
 
-.menu-bar a:hover {
-  background-color: #ffb347;
-}
-
+/* main-cards 세로 배치 */
 .main-cards {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column; /* 세로로 배치 */
+  align-items: center;
+  justify-content: center;
   padding: 30px 20px;
 }
 
 .card {
   background-color: #ffffff;
   border-radius: 15px;
-  width: 200px;
-  height: 120px;
-  margin: 10px;
+  width: 90%; /* 너비 조정 */
+  height: 200px; /* 카드 높이를 늘려서 세로 형태로 */
+  margin: 15px 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
 }
-
 .event-video {
   display: flex;
   justify-content: space-around;
@@ -202,18 +196,28 @@ button:hover {
   }
 
   .menu-bar ul {
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .menu-bar a {
-    display: block;
-    width: auto;
-    text-align: center;
-    padding: 8px 20px;
-    font-size: 10px;
+    padding: 12px 25px; /* 모바일에서 버튼 크기 조정 */
+    font-size: 14px;
   }
+
+  /* 모바일에서도 main-cards 세로로 정렬 */
+  .main-cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .card {
+    width: 90%; /* 모바일에서도 카드 크기 조정 */
+    height: 150px; /* 모바일에서도 카드 높이 조정 */
+    margin: 10px 0;
+  }
+}
 
   .title-banner {
     font-size: 28px;
